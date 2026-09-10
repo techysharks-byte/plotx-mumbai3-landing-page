@@ -48,7 +48,10 @@
 
   /* Hero */
   .hero-banner { margin-top: 76px; padding: 0; position: relative; background: #0a1420; }
+  .hero-banner-media { position: relative; }
   .hero-banner img { display: block; width: 100%; height: auto; }
+  .hero-enquire-hotspot { position: absolute; left: 4.75%; top: 62.6%; width: 17.75%; height: 6.2%; border-radius: 6px; cursor: pointer; }
+  .hero-enquire-hotspot:hover, .hero-enquire-hotspot:focus-visible { box-shadow: 0 0 0 3px rgba(255,255,255,0.7) inset; outline: none; }
   .hero-cta-bar { background: linear-gradient(150deg, #0a1420, #1a2c42); border-top: 1px solid rgba(193,154,83,0.3); padding: 20px 0; }
   .hero-cta-inner { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
   .btn { padding: 15px 28px; border-radius: 3px; font-size: 14px; letter-spacing: 0.4px; font-weight: 600; display: inline-flex; align-items: center; gap: 9px; }
@@ -225,7 +228,10 @@
 </header>
 
 <section class="hero-banner">
-  <img src="images/hero-banner-mumbai-3-0.jpg" alt="Mumbai 3.0 is rising — invest before the curve does. Starting from ₹32 Lakhs onwards. 100% verified plots, all road touch, airport connectivity, future growth. PlotX Developers." loading="eager" fetchpriority="high">
+  <div class="hero-banner-media">
+    <img src="images/hero-banner-mumbai-3-0.jpg" alt="Mumbai 3.0 is rising — invest before the curve does. Starting from ₹32 Lakhs onwards. 100% verified plots, all road touch, airport connectivity, future growth. PlotX Developers." loading="eager" fetchpriority="high">
+    <a href="#contact" class="hero-enquire-hotspot" aria-label="Enquire Now"></a>
+  </div>
   <div class="hero-cta-bar">
     <div class="container hero-cta-inner">
       <a href="tel:+919876543210" class="btn btn-primary">
