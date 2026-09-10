@@ -45,10 +45,8 @@
   /* Header */
   header { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: rgba(10,20,32,0.94); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(193,154,83,0.15); }
   .nav-wrap { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1180px; margin: 0 auto; }
-  .logo { display: flex; flex-direction: column; line-height: 1.1; }
-  .logo b { color: #fff; font-size: 21px; letter-spacing: 1px; font-family: 'Poppins', sans-serif; font-weight: 700; }
-  .logo b span { color: var(--gold); }
-  .logo small { color: #a9b0ba; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; }
+  .logo { display: flex; align-items: center; }
+  .logo img { height: 40px; width: auto; display: block; }
   nav ul { display: flex; gap: 30px; }
   nav a { color: #e8e6e2; font-size: 13.5px; letter-spacing: 0.4px; }
   nav a:hover { color: var(--gold); }
@@ -220,10 +218,9 @@
 
 <header>
   <div class="nav-wrap">
-    <div class="logo">
-      <b>Plot<span>X</span></b>
-      <small>Developers</small>
-    </div>
+    <a href="#" class="logo">
+      <img src="images/logo-plotx.png" alt="PlotX Developers">
+    </a>
     <nav>
       <ul>
         <li><a href="#about">Why PlotX</a></li>
