@@ -34,6 +34,7 @@
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
+  #about, #parcels, #process, #location, #contact { scroll-margin-top: 84px; }
   body { font-family: 'Inter', Arial, sans-serif; color: var(--dark); line-height: 1.65; background: #fff; }
   h1, h2, h3, h4 { font-family: 'Poppins', 'Segoe UI', Arial, sans-serif; font-weight: 600; letter-spacing: 0.2px; }
   a { text-decoration: none; color: inherit; }
@@ -198,6 +199,7 @@
 
   /* Sticky mobile CTA bar */
   .mobile-cta-bar { display: none; }
+  .mobile-quicklinks { display: none; }
 
   @media (max-width: 980px) {
     nav ul { display: none; }
@@ -213,6 +215,13 @@
     .form-row { grid-template-columns: 1fr; }
     .narrative { flex-direction: column; align-items: flex-start; }
     .narrative-img { width: 100%; height: auto; aspect-ratio: 1 / 1; }
+
+    .mobile-quicklinks { display: flex; gap: 8px; overflow-x: auto; -webkit-overflow-scrolling: touch; padding: 10px 16px 12px; background: #0a1420; border-top: 1px solid rgba(193,154,83,0.12); }
+    .mobile-quicklinks::-webkit-scrollbar { display: none; }
+    .mobile-quicklinks a { flex-shrink: 0; font-size: 12px; font-weight: 600; letter-spacing: 0.3px; color: #e8e6e2; padding: 7px 14px; border: 1px solid rgba(193,154,83,0.35); border-radius: 999px; }
+    .mobile-quicklinks a:active { background: rgba(193,154,83,0.18); }
+    .hero-banner { margin-top: 134px; }
+    #about, #parcels, #process, #location, #contact { scroll-margin-top: 142px; }
 
     .mobile-cta-bar { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 300; background: #0a1420; border-top: 1px solid rgba(193,154,83,0.3); padding: 10px 14px; gap: 10px; }
     .mobile-cta-bar a { flex: 1; text-align: center; padding: 13px 10px; border-radius: 4px; font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 8px; }
@@ -245,6 +254,13 @@
       </a>
       <a href="#contact" class="nav-cta">Enquire Now</a>
     </div>
+  </div>
+  <div class="mobile-quicklinks">
+    <a href="#about">Why PlotX</a>
+    <a href="#parcels">Land Parcels</a>
+    <a href="#process">Process</a>
+    <a href="#location">Location</a>
+    <a href="#contact">Contact</a>
   </div>
 </header>
 
