@@ -63,6 +63,15 @@
   .hero-enquire-hotspot:hover, .hero-enquire-hotspot:focus-visible { box-shadow: 0 0 0 3px rgba(255,255,255,0.7) inset; outline: none; }
   .hero-cta-bar { background: linear-gradient(150deg, #0a1420, #1a2c42); border-top: 1px solid rgba(193,154,83,0.3); padding: 20px 0; }
   .hero-cta-inner { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+
+  /* Book feature */
+  .book-feature { background: #0a1420; padding: 0 0 40px; border-bottom: 1px solid rgba(193,154,83,0.15); }
+  .book-feature-banner img { width: 100%; height: auto; display: block; }
+  .book-feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 32px; }
+  .book-feature-grid img { width: 100%; height: auto; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.35); }
+  @media (max-width: 980px) {
+    .book-feature-grid { grid-template-columns: 1fr; }
+  }
   .btn { padding: 15px 28px; border-radius: 3px; font-size: 14px; letter-spacing: 0.4px; font-weight: 600; display: inline-flex; align-items: center; gap: 9px; }
   .btn-primary { background: linear-gradient(135deg, var(--gold-light), var(--gold)); color: #1a1406; }
   .btn-primary:hover { filter: brightness(1.06); }
@@ -255,6 +264,16 @@
         Get Free Investment Details
       </a>
     </div>
+  </div>
+</section>
+
+<section class="book-feature">
+  <div class="book-feature-banner">
+    <img src="images/book-goldmine-banner.jpg" alt="Mumbai 3.0: A Goldmine by Dr. Swapnil Kale — available now">
+  </div>
+  <div class="container book-feature-grid">
+    <img src="images/book-goldmine-platforms.jpg" alt="Mumbai 3.0: A Goldmine — available now on Amazon, Kindle, Google Play Books, Kobo and Flipkart">
+    <img src="images/book-goldmine-cover.jpg" alt="Mumbai 3.0: A Goldmine book cover — From 20 Lakhs to 2 Crores, by Dr. Swapnil Kale">
   </div>
 </section>
 
