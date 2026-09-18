@@ -641,10 +641,28 @@
     if (sel) { sel.value = name; }
   }
 
-  // Wire this submit handler to your CRM / backend endpoint to receive live enquiries.
+  var ENQUIRY_SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbw28MTUefnZWhiBQixbuJATA5lKHehvpXwVJmigj46qvk6BvTr14Xau9-eqCpsqrgHo/exec';
+
   document.getElementById('enquiry-form').addEventListener('submit', function (e) {
     e.preventDefault();
     var form = e.target;
+
+    var body = new URLSearchParams({
+      name: document.getElementById('f-name').value,
+      phone: document.getElementById('f-phone').value,
+      email: document.getElementById('f-email').value,
+      parcel: document.getElementById('f-parcel').value
+    });
+
+    fetch(ENQUIRY_SHEET_ENDPOINT, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: body
+    }).catch(function () {
+      // Sheet may be briefly unreachable; the enquiry is still confirmed to the visitor below.
+    });
+
     form.style.display = 'none';
     document.getElementById('thank-you').style.display = 'block';
   });
